@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Colores" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_txt_colores" translatesAutoresizingMaskIntoConstraints="NO" id="8mI-rY-YRN">
+                                <rect key="frame" x="51.5" y="155" width="271" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="83a-xT-0eL"/>
+                                    <constraint firstAttribute="width" constant="271" id="g6j-9i-hQp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_knob_base" translatesAutoresizingMaskIntoConstraints="NO" id="2X0-Lq-E7l">
+                                <rect key="frame" x="99" y="411" width="176" height="176"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="iDG-5w-ygk"/>
+                                    <constraint firstAttribute="width" constant="176" id="mpY-cS-cd3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-a6-Xdt">
+                                <rect key="frame" x="106.5" y="42" width="162" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="gPw-Jg-05a"/>
+                                    <constraint firstAttribute="width" constant="162" id="jjI-Z1-M6g"/>
+                                </constraints>
+                                <state key="normal" image="img_switch_off"/>
+                                <connections>
+                                    <action selector="btnSwitchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rrr-c8-gkY"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_knob" translatesAutoresizingMaskIntoConstraints="NO" id="hlh-T6-bgL">
+                                <rect key="frame" x="109" y="421" width="156" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="aSk-Yt-hUw"/>
+                                    <constraint firstAttribute="height" constant="156" id="nhu-cX-pQq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2X0-Lq-E7l" secondAttribute="bottom" constant="80" id="FT1-uY-7Sz"/>
+                            <constraint firstItem="Ygz-a6-Xdt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NnN-LF-6gu"/>
+                            <constraint firstItem="2X0-Lq-E7l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OXM-Y3-mi3"/>
+                            <constraint firstItem="8mI-rY-YRN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="135" id="RCR-Ih-ykw"/>
+                            <constraint firstItem="8mI-rY-YRN" firstAttribute="top" secondItem="Ygz-a6-Xdt" secondAttribute="bottom" constant="8" id="Wyq-cW-iMf"/>
+                            <constraint firstItem="hlh-T6-bgL" firstAttribute="centerX" secondItem="2X0-Lq-E7l" secondAttribute="centerX" id="XXf-G5-1hC"/>
+                            <constraint firstItem="hlh-T6-bgL" firstAttribute="centerY" secondItem="2X0-Lq-E7l" secondAttribute="centerY" id="YUW-cV-f5j"/>
+                            <constraint firstItem="8mI-rY-YRN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dwJ-wc-MpU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnSwitch" destination="Ygz-a6-Xdt" id="DYw-sa-sGc"/>
+                        <outlet property="imgKnob" destination="hlh-T6-bgL" id="sew-j4-F9r"/>
+                        <outlet property="imgKnobBase" destination="2X0-Lq-E7l" id="jfi-Wp-WmK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_knob" width="156" height="156"/>
+        <image name="img_knob_base" width="176" height="176"/>
+        <image name="img_switch_off" width="162" height="105"/>
+        <image name="img_txt_colores" width="271" height="44"/>
+    </resources>
+</document>
